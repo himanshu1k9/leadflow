@@ -1,3 +1,5 @@
+import Header from "@/components/Header";
+
 interface Lead {
   id: number;
   name: string;
@@ -23,6 +25,7 @@ export default async function Home() {
   const result: LeadResponse = await response.json();
   return (
     <main className="p-8">
+      <Header />
       <h1 className="text-2xl font-bold">Lead Management</h1>
       <div className="mt-6 space-y-4">
         {result.data.map((lead) => (
